@@ -74,7 +74,7 @@
   /******/__webpack_require__.p = "";
   /******/
   /******/ // Load entry module and return exports
-  /******/return __webpack_require__(__webpack_require__.s = 6);
+  /******/return __webpack_require__(__webpack_require__.s = 11);
   /******/
 })(
 /************************************************************************/
@@ -125,31 +125,50 @@
   module.exports = indexController;
 
   /***/
-},,,,
+},,,,,,,,,
 /* 3 */
 /* 4 */
 /* 5 */
 /* 6 */
+/* 7 */
+/* 8 */
+/* 9 */
+/* 10 */
+/* 11 */
 /***/function (module, exports, __webpack_require__) {
 
   var indexTpl = __webpack_require__(0);
   var headerTpl = __webpack_require__(1);
-  var homeTpl = __webpack_require__(7);
+  var homeOrderTpl = __webpack_require__(12);
 
   var indexController = __webpack_require__(2);
+  var orderController = __webpack_require__(13);
 
   document.getElementById('root').innerHTML = indexTpl;
-  document.querySelector('.container').innerHTML = headerTpl + homeTpl;
+  document.querySelector('.container').innerHTML = headerTpl + homeOrderTpl;
 
   indexController.headerAction();
+  orderController.firstListClick();
 
   /***/
 },
-/* 7 */
+/* 12 */
 /***/function (module, exports) {
 
-  module.exports = "<div class =\"banner-container\">        <div class = \"banner\">            <div class = \"banner-pic\">                <ul class = \"banner-container\">                    <li class = \"banner-pic-list\">                        <img src = \"./static/images/banner-frostino.jpg\"/>                    </li>                </ul>            </div>            <div id = \"home-banner-list\">                <ul class = \"banner-list\">                    <li class =\"active\"></li>                    <li></li>                    <li></li>                    <li></li>                </ul>                <ul class = \"navigator\">                    <li class = \"right\">                        &gt;                    </li>                    <li class = \"left\">                        &lt;                    </li>                </ul>            </div>        </div>        <div class = \"margin-between\">            <div class =\"margin-between-bottom\">                <h2>                    本店热卖                </h2>            </div>        </div>        <div class = \"hot-single\">            <ul class =\"hot-single-list\">                <li>                    <img src =\"./static/images/hot1.jpg\"/>                </li>                <li>                    <img src =\"./static/images/hot2.jpeg\"/>                </li>                <li>                    <img src =\"./static/images/hot5.jpeg\"/>                </li>                <li class = \"hot-single-list-last\">                    <img src =\"./static/images/hot4.jpeg\"/>                </li>            </ul>            </div>        <div class = \"margin-between\">            <div class =\"margin-between-bottom\">                <h2>                    本店新品                </h2>            </div>        </div>        <div class = \"hot-single\">                <ul class =\"hot-single-list\">                    <li>                        <img src =\"./static/images/new1.jpg\"/>                    </li>                    <li>                        <img src =\"./static/images/new2.jpeg\"/>                    </li>                    <li>                        <img src =\"./static/images/new3.jpeg\"/>                    </li>                    <li class = \"hot-single-list-last\">                        <img src =\"./static/images/new4.jpeg\"/>                    </li>                </ul>        </div>        <div class = \"hot-single\">                <ul class =\"hot-single-list\">                    <li>                        <img src =\"./static/images/new1.jpg\"/>                    </li>                    <li>                        <img src =\"./static/images/new2.jpeg\"/>                    </li>                    <li>                        <img src =\"./static/images/new3.jpeg\"/>                    </li>                    <li class = \"hot-single-list-last\">                        <img src =\"./static/images/new4.jpeg\"/>                    </li>                </ul>        </div>    </div>";
+  module.exports = "<div class=\"orderMainOut\">    <div class=\"orderMain\">        <div class=\"orderList\">            <ul class=\"clear\">                <li class=\"fir_li\">                    <a>咖啡</a>                    <ul class=\"clear\">                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                    </ul>                </li>                <li class=\"fir_li\">                    <a>咖啡</a>                    <ul class=\"clear\">                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                    </ul>                </li>                <li class=\"fir_li\">                    <a>咖啡</a>                    <ul class=\"clear\">                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                    </ul>                </li>                <li class=\"fir_li\">                    <a>咖啡</a>                    <ul class=\"clear\">                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                    </ul>                </li>            </ul>        </div>        <div class=\"orderContainer\">            <ul class=\"clear\">                <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                </li>             </ul>        </div>    </div></div>";
 
   /***/
+},
+/* 13 */
+/***/function (module, exports) {
+
+  module.exports = {
+    firstListClick: function firstListClick() {
+      $(".fir_li>a").on("click", function () {
+        $(this).next().slideToggle();
+      });
+    }
+
+    /***/ };
 }]
 /******/);
