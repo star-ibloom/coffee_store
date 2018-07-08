@@ -74,7 +74,7 @@
     /******/__webpack_require__.p = "";
     /******/
     /******/ // Load entry module and return exports
-    /******/return __webpack_require__(__webpack_require__.s = 8);
+    /******/return __webpack_require__(__webpack_require__.s = 9);
     /******/
 })(
 /************************************************************************/
@@ -87,13 +87,6 @@
     /***/
 },
 /* 1 */
-/***/function (module, exports) {
-
-    module.exports = "<header>    <div class=\"headerinner clear\">        <div class=\"logo_header\"></div>        <ul class=\"nav_header clear\">            <li>首页</li>            <li>点餐</li>            <li>订单</li>            <li>换桌</li>            <li>登录</li>            <li>欢迎</li>        </ul>    </div></header>";
-
-    /***/
-},
-/* 2 */
 /***/function (module, exports) {
 
     var indexController = {
@@ -125,38 +118,15 @@
     module.exports = indexController;
 
     /***/
-},,,,,,
-/* 3 */
-/* 4 */
-/* 5 */
-/* 6 */
-/* 7 */
-/* 8 */
-/***/function (module, exports, __webpack_require__) {
-
-    var indexTpl = __webpack_require__(0);
-    var headerTpl = __webpack_require__(1);
-    var homeLoginTpl = __webpack_require__(9);
-
-    var indexController = __webpack_require__(2);
-    var loginController = __webpack_require__(10);
-
-    document.getElementById('root').innerHTML = indexTpl;
-    document.querySelector('.container').innerHTML = headerTpl + homeLoginTpl;
-
-    indexController.headerAction();
-    loginController.text();
-
-    /***/
 },
-/* 9 */
+/* 2 */
 /***/function (module, exports) {
 
-    module.exports = "<div class=\"login_main\">    <section class=\"clear\">        <div class=\"login_bg\"></div>        <div class=\"login_context\">            <div class=\"tip\">登录缘来，享受更多优惠</div>            <form action=\"\">                <input type=\"text\" name=\"log_username\" id=\"emall\" placeholder=\"邮箱\">                <span class=\"errMsg\">邮箱输入错误</span>                <input type=\"password\" name=\"log_pas\" id=\"password\"placeholder=\"密码\">                <button id=\"login_btn\" class=\"aa\">登录</button>                                                  </form>        </div>    </section></div>";
+    module.exports = "<header>    <div class=\"headerinner clear\">        <div class=\"logo_header\"></div>        <ul class=\"nav_header clear\">            <li>首页</li>            <li>点餐</li>            <li>订单</li>            <li>换桌</li>            <li>登录</li>            <li>欢迎</li>        </ul>    </div></header>";
 
     /***/
 },
-/* 10 */
+/* 3 */
 /***/function (module, exports) {
 
     module.exports = {
@@ -182,5 +152,35 @@
         }
 
         /***/ };
+},,,,,,
+/* 4 */
+/* 5 */
+/* 6 */
+/* 7 */
+/* 8 */
+/* 9 */
+/***/function (module, exports, __webpack_require__) {
+
+    var indexTpl = __webpack_require__(0);
+    var headerTpl = __webpack_require__(2);
+    var homeLoginTpl = __webpack_require__(10);
+
+    var indexController = __webpack_require__(1);
+    var loginController = __webpack_require__(3);
+
+    document.getElementById('root').innerHTML = indexTpl;
+    document.querySelector('.container').innerHTML = headerTpl + homeLoginTpl;
+
+    indexController.headerAction();
+    loginController.text();
+
+    /***/
+},
+/* 10 */
+/***/function (module, exports) {
+
+    module.exports = "<div class=\"space\"></div><div class=\"login_main\">    <section class=\"clear\">        <div class=\"login_bg\"></div>        <div class=\"login_context\">            <div class=\"tip\">登录缘来，享受更多优惠</div>            <form action=\"\">                <input type=\"text\" name=\"log_username\" id=\"emall\" placeholder=\"邮箱\">                <span class=\"errMsg\">邮箱格式输入错误</span>                <input type=\"password\" name=\"log_pas\" id=\"password\"placeholder=\"密码\">                <button id=\"login_btn\" class=\"aa\">登录</button>                                                  </form>        </div>    </section></div>";
+
+    /***/
 }]
 /******/);

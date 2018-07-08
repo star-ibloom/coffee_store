@@ -1,0 +1,65 @@
+ .myOrderOut{
+     width:100%;
+     background: yellow;
+     .myOrder{
+         position: relative;    
+         width: 1100px;
+         background: pink;
+         margin: 0 auto;
+        margin-top: 5px;
+         .tableInfo{
+             margin-top: 5px;
+             margin-left: 5px;
+             .tableFont{
+                font-size: 20px;
+            }
+            .tableId{
+                color: red;
+                margin-left: 2px;
+                font-size: 18px;
+            }
+        }
+        .orderTable{
+            width: 900px;
+            margin: 0 auto;
+            background: yellowgreen;
+            text-align: center;
+            border: 1px solid #333;
+            th{
+                border-bottom: 1px solid #333;
+            }
+            .orderImg{
+                width: 100px;
+                height: 100px;
+                background: red;
+                margin: 5px auto;
+            }
+        }
+        .priceInfo{
+            position: absolute;
+            right: 100px;
+            margin-top: 50px;
+            .priceFont{
+                font-size: 20px; 
+            }
+            .price{
+                font-size: 18px;
+                color: red;
+                margin-right: 5px;
+            }
+            .subOrder{
+                border-radius: 5px;
+                box-sizing: border-box;
+                background: #eee;
+                width: 88px;
+                height: 24px;
+                line-height: 24px;
+                float: right;
+                text-align: center;
+                font-size: 18px;
+                margin-left: 20px;
+                margin-top: -7px;
+            }
+        } 
+     }
+ }

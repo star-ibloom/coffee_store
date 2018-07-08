@@ -67,7 +67,9 @@ gulp.task('js',()=>{
           'app-welcome': './src/scripts/app-welcome.js',
           'app-home': './src/scripts/app-home.js',
           'app-login': './src/scripts/app-login.js',
-          'app-order': './src/scripts/app-order.js'
+          'app-register': './src/scripts/app-register.js',
+          'app-order': './src/scripts/app-order.js',
+          'app-myOrder': './src/scripts/app-myOrder.js'
         },
         output: {
           filename: '[name].js'
