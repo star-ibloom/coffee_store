@@ -74,7 +74,7 @@
   /******/__webpack_require__.p = "";
   /******/
   /******/ // Load entry module and return exports
-  /******/return __webpack_require__(__webpack_require__.s = 13);
+  /******/return __webpack_require__(__webpack_require__.s = 14);
   /******/
 })(
 /************************************************************************/
@@ -125,7 +125,7 @@
   module.exports = "<header>    <div class=\"headerinner clear\">        <div class=\"logo_header\"></div>        <ul class=\"nav_header clear\">            <li>首页</li>            <li>点餐</li>            <li>订单</li>            <li>换桌</li>            <li>登录</li>            <li>欢迎</li>        </ul>    </div></header>";
 
   /***/
-},,,,,,,,,,,
+},,,,,,,,,,,,
 /* 3 */
 /* 4 */
 /* 5 */
@@ -137,14 +137,15 @@
 /* 11 */
 /* 12 */
 /* 13 */
+/* 14 */
 /***/function (module, exports, __webpack_require__) {
 
   var indexTpl = __webpack_require__(0);
   var headerTpl = __webpack_require__(2);
-  var homeOrderTpl = __webpack_require__(14);
+  var homeOrderTpl = __webpack_require__(15);
 
   var indexController = __webpack_require__(1);
-  var orderController = __webpack_require__(15);
+  var orderController = __webpack_require__(16);
 
   document.getElementById('root').innerHTML = indexTpl;
   document.querySelector('.container').innerHTML = headerTpl + homeOrderTpl;
@@ -154,14 +155,14 @@
 
   /***/
 },
-/* 14 */
+/* 15 */
 /***/function (module, exports) {
 
   module.exports = "<div class=\"orderMainOut\">    <div class=\"orderMain\">        <div class=\"orderList\">            <ul class=\"clear\">                <li class=\"fir_li\">                    <a>咖啡</a>                    <ul class=\"clear\">                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                    </ul>                </li>                <li class=\"fir_li\">                    <a>咖啡</a>                    <ul class=\"clear\">                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                    </ul>                </li>                <li class=\"fir_li\">                    <a>咖啡</a>                    <ul class=\"clear\">                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                    </ul>                </li>                <li class=\"fir_li\">                    <a>咖啡</a>                    <ul class=\"clear\">                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                    </ul>                </li>            </ul>        </div>        <div class=\"orderContainer\">            <ul class=\"clear\">                <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                </li>             </ul>        </div>    </div></div>";
 
   /***/
 },
-/* 15 */
+/* 16 */
 /***/function (module, exports) {
 
   module.exports = {

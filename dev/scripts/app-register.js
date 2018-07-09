@@ -74,7 +74,7 @@
     /******/__webpack_require__.p = "";
     /******/
     /******/ // Load entry module and return exports
-    /******/return __webpack_require__(__webpack_require__.s = 11);
+    /******/return __webpack_require__(__webpack_require__.s = 12);
     /******/
 })(
 /************************************************************************/
@@ -146,7 +146,7 @@
         }
 
         /***/ };
-},,,,,,,,
+},,,,,,,,,
 /* 4 */
 /* 5 */
 /* 6 */
@@ -155,11 +155,12 @@
 /* 9 */
 /* 10 */
 /* 11 */
+/* 12 */
 /***/function (module, exports, __webpack_require__) {
 
     var indexTpl = __webpack_require__(0);
     // const headerTpl = require('./views/header.html')
-    var homeRegisterTpl = __webpack_require__(12);
+    var homeRegisterTpl = __webpack_require__(13);
 
     var indexController = __webpack_require__(1);
     var loginController = __webpack_require__(3);
@@ -176,7 +177,7 @@
 
     /***/
 },
-/* 12 */
+/* 13 */
 /***/function (module, exports) {
 
     module.exports = "<div class=\"space\">    <a id=\"backHome\">返回首页</a></div><div class=\"login_main\">    <section class=\"clear\">        <div class=\"login_bg\"></div>        <div class=\"login_context\">            <div class=\"tip\">注册缘来，享受更多优惠</div>            <form action=\"\">                <input type=\"text\" name=\"log_username\" id=\"emall\" placeholder=\"邮箱\">                <span class=\"errMsg\">邮箱格式输入错误</span>                <input type=\"password\" name=\"log_pas\" id=\"password\"placeholder=\"密码\">                <button id=\"login_btn\" class=\"aa\">注册</button>                                                  </form>        </div>    </section></div>";

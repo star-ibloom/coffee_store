@@ -48,6 +48,14 @@ gulp.task('scss',()=>{
 
 })
 
+gulp.task('css',()=>{
+    return gulp.src('./src/styles/*.css')
+    //  .pipe(sass().on('error',sass.logError))
+
+     .pipe(gulp.dest('./dev/styles'))
+
+})
+
 gulp.task('js',()=>{
     return gulp.src('./src/scripts/*.js')
     //  .pipe(webpack({         
@@ -66,7 +74,8 @@ gulp.task('js',()=>{
         //   app: './src/scripts/app.js',
           'app-welcome': './src/scripts/app-welcome.js',
           'app-home': './src/scripts/app-home.js',
-          'app-login': './src/scripts/app-login.js',
+          'app-login': './src/scripts/app-login.js',    
+          'app-swiper': './src/scripts/swiper.min.js',
           'app-register': './src/scripts/app-register.js',
           'app-order': './src/scripts/app-order.js',
           'app-myOrder': './src/scripts/app-myOrder.js'
@@ -115,7 +124,7 @@ gulp.task('watch',()=>{
     gulp.watch('./src/scripts/**/*',['js'])
 })
  
-gulp.task('default',['js','scss','copyhtml','copylibs','copystatic','server','watch'],()=>{
+gulp.task('default',['js','scss','css','copyhtml','copylibs','copystatic','server','watch'],()=>{
     console.log('done.')
 })
  

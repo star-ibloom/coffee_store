@@ -5,25 +5,115 @@
     url('iconfont.ttf') format('truetype'),
     // url('iconfont.svg#iconfont') format('svg');
   }
+  .swiper-container {
+    width: 1100px;
+    height: 100%;
+    .swiper-slide{
+        img{
+            width:1100px;
+        }
+    }
+}
+
+
+
+
+
+
+
 .banner-container{
     width:1100px;
     margin:0 auto;
-    .banner{ 
-        width:1100px;
-        height:373px;
-        margin:0 auto;
+    position: relative;
+    // .side-nav{
+    //     width:80px;
+    //     height:105px;
+    //     position:fixed;
+    //     left:10px;
+    //     top:200px;
+    //     border-radius: 10%;
+    //     .side-nav-list{
+    //         background:#ae8648;
+    //         border:1px solid lightsalmon;
+    //         font-size:18px;
+
+    //         li{
+    //             text-align: center;
+    //             line-height: 25px;
+    //             width:60px;
+    //             height:25px;
+    //             margin:0 auto;
+    //             border-bottom:1px solid lightsalmon;
+    //         }
+    //         .side-nav-list-last{
+    //             text-align: center;
+    //             line-height: 25px;
+    //             width:60px;
+    //             height:25px;
+    //             margin:0 auto;
+    //             border:none;
+    //         }
+    //     }
+    // }
+    .swiper-container{
+        background:red;
+        .swiper-button-prev{
+            color:lightyellow;
+        }
+        .swiper-button-next{
+            color:lightyellow;
+        }
+        .swiper-pagination{
+            width:200px;
+            margin-left:450px;
+            padding-right:20px;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size:20px;
+            .swiper-pagination-bullet{
+                z-index:999;
+                border-radius: 50%;
+                margin-left:20px;
+                width:20px;
+                height:20px;
+                float:left;
+                margin-top:5px;
+                border:1px solid goldenrod;
+                background:goldenrod;
+            }
+            .swiper-pagination-bullet-active{
+                border-radius: 50%;
+                margin-left:20px;
+                width:20px;
+                height:20px;
+                float:left;
+                margin-top:5px;
+                border:1px solid goldenrod;
+                background:rgb(248, 156, 43);
+            }
+        }
+    }
+    　
+    .banner{
+        position:relative;
+
         padding-bottom:13px;
         .banner-pic{
+            z-index:1;
             img{
                 width:100%;
                 height:342px;
             }
         }
         #home-banner-list{
+            position: absolute;
+            bottom:32px;
+            z-index:5;
             width:100%;
             height:31px;
-            background:#ae8648;
+        
             .banner-list{
+            z-index:5;
             margin:0 auto;
             padding-right:20px;
             width:220px;
@@ -31,6 +121,7 @@
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size:20px;
                 li{
+                    z-index:999;
                     border-radius: 50%;
                     margin-left:20px;
                     width:20px;
@@ -52,7 +143,7 @@
                 }
             }
             .navigator{
-                widows: 80px;
+                width: 80px;
                 height:31px;
                 font-family: 'iconfont';
                 float:right;
@@ -65,14 +156,24 @@
             }
         }
     }
+    .swiper-container {
+        margin:0 auto;
+        width: 1100px;
+        height: 342px;
+        img{
+            width:100%;
+            height:342px;
+        }
+    }  
     .margin-between{
+        padding-left:30px;
         width:1100px;
         height:38px;
         margin:0 auto;
         .margin-between-bottom{
             height:36px;
             width:80px;
-            border-bottom:3px solid lightsteelblue;
+            border-bottom:3px solid #ae8648;
             h2{
             font-size:20px;
             line-height:48px;
@@ -82,26 +183,26 @@
     }
     .hot-single{
         width:1100px;
-        height:200px;
+        height:150px;
         margin:0 auto;
         .hot-single-list{
             li{
                 width:270px;
-                height:200px;
+                height:150px;
                 float:left;
                 margin-right:7px;  
                 img{
                     width:270px;
-                    height:200px;
+                    height:150px;
                 }  
             }
             .hot-single-list-last{
                 width: 269px;
-                height:200px;
+                height:150px;
                 margin:0;
                 img{
-                    width:270px;
-                    height:200px;
+                    width:269px;
+                    height:150px;
                 } 
             }
         }

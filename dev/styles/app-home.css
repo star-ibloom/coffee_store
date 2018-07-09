@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url(./swiper.min.css);
 img {
   border: 0;
   max-width: 100%;
@@ -122,29 +124,78 @@ header {
   font-family: 'iconfont';
   src: url("iconfont.woff") format("woff"), url("iconfont.ttf") format("truetype"); }
 
+.swiper-container {
+  width: 1100px;
+  height: 100%; }
+  .swiper-container .swiper-slide img {
+    width: 1100px; }
+
 .banner-container {
   width: 1100px;
-  margin: 0 auto; }
-  .banner-container .banner {
-    width: 1100px;
-    height: 373px;
-    margin: 0 auto;
+  margin: 0 auto;
+  position: relative; }
+  .banner-container .swiper-container {
+    background: red; }
+    .banner-container .swiper-container .swiper-button-prev {
+      color: lightyellow; }
+    .banner-container .swiper-container .swiper-button-next {
+      color: lightyellow; }
+    .banner-container .swiper-container .swiper-pagination {
+      width: 200px;
+      margin-left: 450px;
+      padding-right: 20px;
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 20px; }
+      .banner-container .swiper-container .swiper-pagination .swiper-pagination-bullet {
+        z-index: 999;
+        border-radius: 50%;
+        margin-left: 20px;
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin-top: 5px;
+        border: 1px solid goldenrod;
+        background: goldenrod; }
+      .banner-container .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+        border-radius: 50%;
+        margin-left: 20px;
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin-top: 5px;
+        border: 1px solid goldenrod;
+        background: #f89c2b; }
+  .banner-container 　
+.banner {
+    position: relative;
     padding-bottom: 13px; }
-    .banner-container .banner .banner-pic img {
+    .banner-container 　
+.banner .banner-pic {
+      z-index: 1; }
+      .banner-container 　
+.banner .banner-pic img {
+        width: 100%;
+        height: 342px; }
+    .banner-container 　
+.banner #home-banner-list {
+      position: absolute;
+      bottom: 32px;
+      z-index: 5;
       width: 100%;
-      height: 342px; }
-    .banner-container .banner #home-banner-list {
-      width: 100%;
-      height: 31px;
-      background: #ae8648; }
-      .banner-container .banner #home-banner-list .banner-list {
+      height: 31px; }
+      .banner-container 　
+.banner #home-banner-list .banner-list {
+        z-index: 5;
         margin: 0 auto;
         padding-right: 20px;
         width: 220px;
         text-align: center;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 20px; }
-        .banner-container .banner #home-banner-list .banner-list li {
+        .banner-container 　
+.banner #home-banner-list .banner-list li {
+          z-index: 999;
           border-radius: 50%;
           margin-left: 20px;
           width: 20px;
@@ -153,7 +204,8 @@ header {
           margin-top: 5px;
           border: 1px solid goldenrod;
           background: burlywood; }
-        .banner-container .banner #home-banner-list .banner-list .active {
+        .banner-container 　
+.banner #home-banner-list .banner-list .active {
           border-radius: 50%;
           margin-left: 20px;
           width: 20px;
@@ -162,44 +214,54 @@ header {
           margin-top: 5px;
           border: 1px solid goldenrod;
           background: #f89c2b; }
-      .banner-container .banner #home-banner-list .navigator {
-        widows: 80px;
+      .banner-container 　
+.banner #home-banner-list .navigator {
+        width: 80px;
         height: 31px;
         font-family: 'iconfont';
         float: right; }
-        .banner-container .banner #home-banner-list .navigator li {
+        .banner-container 　
+.banner #home-banner-list .navigator li {
           float: right;
           width: 31px;
           height: 31px;
           line-height: 31px; }
+  .banner-container .swiper-container {
+    margin: 0 auto;
+    width: 1100px;
+    height: 342px; }
+    .banner-container .swiper-container img {
+      width: 100%;
+      height: 342px; }
   .banner-container .margin-between {
+    padding-left: 30px;
     width: 1100px;
     height: 38px;
     margin: 0 auto; }
     .banner-container .margin-between .margin-between-bottom {
       height: 36px;
       width: 80px;
-      border-bottom: 3px solid lightsteelblue; }
+      border-bottom: 3px solid #ae8648; }
       .banner-container .margin-between .margin-between-bottom h2 {
         font-size: 20px;
         line-height: 48px;
         color: #ae8648; }
   .banner-container .hot-single {
     width: 1100px;
-    height: 200px;
+    height: 150px;
     margin: 0 auto; }
     .banner-container .hot-single .hot-single-list li {
       width: 270px;
-      height: 200px;
+      height: 150px;
       float: left;
       margin-right: 7px; }
       .banner-container .hot-single .hot-single-list li img {
         width: 270px;
-        height: 200px; }
+        height: 150px; }
     .banner-container .hot-single .hot-single-list .hot-single-list-last {
       width: 269px;
-      height: 200px;
+      height: 150px;
       margin: 0; }
       .banner-container .hot-single .hot-single-list .hot-single-list-last img {
-        width: 270px;
-        height: 200px; }
+        width: 269px;
+        height: 150px; }
