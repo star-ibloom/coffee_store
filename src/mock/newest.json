@@ -1,0 +1,59 @@
+{
+
+    "res": true,
+    "code": 0,
+    "data": {
+        "gourmet": [],
+        "drinks": [
+            {
+                "id": 1,
+                "name": "美式咖啡(冷)",
+                "price": 18,
+                "membershipPrice": 16,
+                "size": 1,
+                "sellingNum": 0,
+                "isNew": "y",
+                "imgPath": null,
+                "intro": null,
+                "cid": 8
+            },
+            {
+                "id": 4,
+                "name": "拿铁(冷)",
+                "price": 20,
+                "membershipPrice": 18,
+                "size": 1,
+                "sellingNum": 0,
+                "isNew": "y",
+                "imgPath": null,
+                "intro": null,
+                "cid": 8
+            },
+            {
+                "id": 7,
+                "name": "美式咖啡(热)",
+                "price": 18,
+                "membershipPrice": 16,
+                "size": 1,
+                "sellingNum": 0,
+                "isNew": "y",
+                "imgPath": null,
+                "intro": null,
+                "cid": 8
+            },
+            {
+                "id": 13,
+                "name": "摩卡(冷)",
+                "price": 18,
+                "membershipPrice": 16,
+                "size": 1,
+                "sellingNum": 7,
+                "isNew": "y",
+                "imgPath": null,
+                "intro": null,
+                "cid": 8
+            }
+        ]
+    }
+
+}

@@ -93,7 +93,7 @@
 
     var indexController = {
       headerAction: function headerAction() {
-        var pagelist = ['home.html', 'order.html', 'myOrder.html', 'changeTable.html', 'login.html', 'welcome.html'];
+        var pagelist = ['home.html', 'order.html', 'myOrder.html', 'login.html', 'welcome.html'];
         $('header li').on('click', function () {
           location.href = pagelist[$(this).index()];
           $(this).addClass('active').siblings().removeClass('active');
@@ -105,12 +105,11 @@
             $('header li').eq(1).addClass("active");break;
           case "myOrder.html":
             $('header li').eq(2).addClass("active");break;
-          case "changeTable.html":
-            $('header li').eq(3).addClass("active");break;
+          // case  "changeTable.html" : $('header li').eq(3).addClass("active");break;
           case "login.html":
-            $('header li').eq(4).addClass("active");break;
+            $('header li').eq(3).addClass("active");break;
           case "welcome.html":
-            $('header li').eq(5).addClass("active");break;
+            $('header li').eq(4).addClass("active");break;
           default:
             return;
         }
@@ -150,7 +149,7 @@
   /***/2:
   /***/function _(module, exports) {
 
-    module.exports = "<header>    <div class=\"headerinner clear\">        <div class=\"logo_header\"></div>        <ul class=\"nav_header clear\">            <li>首页</li>            <li>点餐</li>            <li>订单</li>            <li>换桌</li>            <li>登录</li>            <li>欢迎</li>        </ul>    </div></header>";
+    module.exports = "<header>    <div class=\"headerinner clear\">        <div class=\"logo_header\"></div>        <ul class=\"nav_header clear\">            <li>首页</li>            <li>点餐</li>            <li>订单</li>            <!-- <li>换桌</li> -->            <li>登录</li>            <li>欢迎</li>        </ul>    </div></header>";
 
     /***/
   }

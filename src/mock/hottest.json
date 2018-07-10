@@ -1,0 +1,38 @@
+{
+
+    "res": true,
+    "code": 0,
+    "data": [
+        {
+            "id": 50,
+            "name": "火腿培根英式麦芬",
+            "price": 28,
+            "membershipprice": 24,
+            "sellingNum": 87,
+            "intro": null,
+            "goodImg": null,
+            "isNew": "n"
+        },
+        {
+            "id": 54,
+            "name": "混合果仁果脯",
+            "price": 30,
+            "membershipprice": 36,
+            "sellingNum": 67,
+            "intro": null,
+            "goodImg": null,
+            "isNew": "n"
+        },
+        {
+            "id": 39,
+            "name": "蓝莓曲奇风轻乳酪蛋糕",
+            "price": 30,
+            "membershipprice": 28,
+            "sellingNum": 50,
+            "intro": null,
+            "goodImg": null,
+            "isNew": "y"
+        }
+    ]
+
+}

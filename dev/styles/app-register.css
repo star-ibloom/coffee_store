@@ -184,3 +184,6 @@ header {
           cursor: pointer;
           border-radius: 26px;
           text-align: center; }
+
+#backHome {
+  cursor: pointer; }

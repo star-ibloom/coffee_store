@@ -26,15 +26,9 @@ gulp.task('server',()=>{
             proxy('/api',{
                 target:'http://localhost:9000',
                 changeOrigin:true,
-            }),
-
-            proxy('/vm',{
-                target:'https://m.vmall.com',
-                changeOrigin:true,
-                pathRewrite :{
-                    '^/vm':''
-                }
             })
+
+            
             // http://m.vmall.com/content/index/more.json?pageNumber=2&contentType=2
         ]
     }))

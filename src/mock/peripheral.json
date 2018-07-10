@@ -1,0 +1,62 @@
+{
+
+    "date": [
+        {
+            "id": 59,
+            "name": "综合咖啡豆",
+            "price": 38,
+            "membershipPrice": 34,
+            "sellingNum": 0,
+            "goodImg": null,
+            "introduction": null
+        },
+        {
+            "id": 60,
+            "name": "烘焙咖啡豆",
+            "price": 38,
+            "membershipPrice": 34,
+            "sellingNum": 0,
+            "goodImg": null,
+            "introduction": null
+        },
+        {
+            "id": 61,
+            "name": "首选咖啡豆",
+            "price": 34,
+            "membershipPrice": 30,
+            "sellingNum": 2,
+            "goodImg": null,
+            "introduction": null
+        },
+        {
+            "id": 62,
+            "name": "苏门答腊咖啡豆",
+            "price": 40,
+            "membershipPrice": 36,
+            "sellingNum": 0,
+            "goodImg": null,
+            "introduction": null
+        },
+        {
+            "id": 63,
+            "name": "低因祥龙综合咖啡豆",
+            "price": 36,
+            "membershipPrice": 34,
+            "sellingNum": 0,
+            "goodImg": null,
+            "introduction": null
+        },
+        {
+            "id": 64,
+            "name": "意式烘焙咖啡的",
+            "price": 32,
+            "membershipPrice": 28,
+            "sellingNum": 5,
+            "goodImg": null,
+            "introduction": null
+        }
+    ],
+    "res": true,
+    "code": 0
+
+}

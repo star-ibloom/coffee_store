@@ -1,3 +1,12 @@
 {
-    "/api/users/signin":"/signin"
+    "/api/users/login":"/login",
+    "/api/users/register":"/register",
+    "/api/menu/firstlevel":"/firstlevel",
+    "/api/menu/secondlevel":"/secondlevel",
+    "/api/prod/drinks":"/drinks",
+    "/api/prod/gourmet":"/gourmet",
+    "/api/prod/peripheral":"/peripheral",
+    "/api/prod/newest":"/newest",
+    "/api/prod/hottest":"/hottest",
+    "/api/service/addToCart":"/addToCart"
 }
