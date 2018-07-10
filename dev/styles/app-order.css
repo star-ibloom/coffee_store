@@ -119,6 +119,7 @@ header {
             background: #141414; }
 
 .orderMainOut {
+  margin-top: 50px;
   width: 100%; }
   .orderMainOut .orderMain {
     width: 1100px;
@@ -159,27 +160,39 @@ header {
         margin-left: 5px; }
         .orderMainOut .orderMain .orderContainer ul .goodInfo {
           float: left;
-          width: 280px;
+          width: 210px;
           background: pink;
-          margin: 5px;
+          margin: 4px;
+          position: relative;
           box-sizing: border-box;
           border-radius: 5px;
           border: #333 solid 1px; }
           .orderMainOut .orderMain .orderContainer ul .goodInfo .goodImage {
-            width: 250px;
-            height: 250px;
+            width: 190px;
+            height: 190px;
             margin: 2px auto;
             background: #999; }
           .orderMainOut .orderMain .orderContainer ul .goodInfo .goodName {
             width: 100%;
-            font-size: 14px;
+            font-size: 18px;
             text-align: center;
             font-weight: 500;
-            line-height: 24px; }
+            line-height: 24px;
+            color: black; }
           .orderMainOut .orderMain .orderContainer ul .goodInfo .goodPrice {
             width: 100%;
-            font-size: 14px;
+            font-size: 16px;
             text-align: center;
             color: red;
             font-weight: bold;
-            margin-bottom: 3px; }
+            margin: 4px auto; }
+          .orderMainOut .orderMain .orderContainer ul .goodInfo button {
+            margin: 0 auto;
+            text-align: center;
+            width: 208px;
+            box-sizing: border-box;
+            height: 32px;
+            line-height: 32px;
+            background: red;
+            color: white;
+            border: 0; }
