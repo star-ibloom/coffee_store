@@ -1,27 +1,41 @@
-module.exports={
-    getFirstLevel(){
+module.exports = {
+    getFirstLevel() {
         return $.ajax({
-            url:'/api/menu/firstlevel',
-            type:"get",
-            success:result => result
+            url: '/api/menu/firstlevel',
+            type: "get",
+            success: result => result
         })
     },
-    getSecondLevel(data){
+    getSecondLevel(data) {
         return $.ajax({
-            url:'/api/menu/secondlevel',
-            type:"get",
+            url: '/api/menu/secondlevel',
+            type: "get",
             data,
-            success:result => result
+            success: result => result
         })
     },
-    getDrinks(){
+    getDrinks(data) {
         return $.ajax({
-            url:'/api/prod/drinks',
-            type:"get",
-            // data:{
-            //     type:"0"
-            // },
-            success:result => result
+            url: '/api/prod/drinks',
+            type: "get",
+            data,
+            success: result => result
+        })
+    },
+    getGourmet(data) {
+        return $.ajax({
+            url: '/api/prod/gourmet',
+            type: "get",
+            data,
+            success: result => result
+        })
+    },
+    getperipheral(data) {
+        return $.ajax({
+            url: '/api/prod/peripheral',
+            type: "get",
+            data,
+            success: result => result
         })
     },
 }
