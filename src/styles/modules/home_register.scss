@@ -3,7 +3,7 @@
     width: 100%;
     height: 50px;
 }
-.login_main{
+.singin_main{
     width: 100%;
     // height: 800px;
     section{
@@ -11,14 +11,14 @@
         // background: yellow; 
         // height: 100%;
         margin: 20px  auto;
-        .login_bg{
+        .singin_bg{
             background: url(../static/images/login_bg.jpg) no-repeat center;
             width: 718px;
             height: 600px;
             background-size: cover;
             float: left;
         }
-        .login_context{
+        .singin_context{
             float: right;
             margin-right: 20px;
             margin-top: 50px;
@@ -42,6 +42,13 @@
                     opacity: 0;
                     margin-top: -5px;
                 }
+                .phoneerrMsg{
+                    color: #B40707;
+                    display: block;
+                    margin-left: 20px;
+                    opacity: 0;
+                    margin-top: -5px;
+                }
                 input{
                     width: 320px; 
                     height:46px;
@@ -54,7 +61,7 @@
                     border: none;
                     border-bottom: 1px solid #ccc;
                 }
-                #login_btn{
+                #singin_btn{
                     background-color: #B40707;
                     border-width: 0 0 2px 0;
                     border-style: solid;

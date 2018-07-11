@@ -28,9 +28,8 @@ module.exports={
         orderModel.getSecondLevel()
         .then(resultSec=>{
             this.jsonSec = resultSec.res;
-            // console.log(resultSec.code)
-            var code = resultSec.code
-            console.log(code)
+            // var code = resultSec.code
+            // console.log(code)
             var secondLevelLi = "";
             this.jsonSec.forEach(function(itemSec){
                 // console.log(itemSec,code)

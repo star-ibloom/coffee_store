@@ -128,27 +128,67 @@
 /* 3 */
 /***/function (module, exports) {
 
+    var text = function text() {
+
+        var oEmall = $("#emall").val();
+        var opwd = $("#password").val();
+        var phonereg = /^[1][3,4,5,7,8][0-9]{9}$/;
+        var regEmall = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
+        var ologin_btn = document.getElementById("login_btn");
+        // 1.@之前必须有内容且只能是字母（大小写）、数字、下划线(_)、减号（-）、点（.）
+        // 2.@和最后一个点（.）之间必须有内容且只能是字母（大小写）、数字、点（.）、减号（-），且两个点不能挨着
+        // 3.最后一个点（.）之后必须有内容且内容只能是字母（大小写）、数字且长度为大于等于2个字节，小于等于6个字节
+        $("#emall").on("blur", function () {
+            var oEmall = $("#emall").val();
+            if (!regEmall.test(oEmall)) {
+                $(".errMsg").css("opacity", 1);
+                // $("#emall").val()="";
+            } else {
+                $(".errMsg").css("opacity", 0);
+            }
+        });
+        $("#username").on("blur", function () {
+            var userName = $("#username").val();
+            if (!phonereg.test(userName)) {
+                $(".phoneerrMsg").css("opacity", 1);
+                // $("#emall").val()="";
+            } else {
+                $(".phoneerrMsg").css("opacity", 0);
+            }
+        });
+
+        //登陆的逻辑登陆的逻辑登陆的逻辑登陆的逻辑登陆的逻辑登陆的逻辑登陆的逻辑
+        $("#login_btn").on("click", function () {
+            console.log(8);
+            var _username$password = {
+                username: $("#emall").val(),
+                password: $("#password").val()
+            },
+                username = _username$password.username,
+                password = _username$password.password;
+
+            console.log({ username: username, password: password });
+
+            var result = sign({ username: username, password: password }, "signin");
+            console.log(result);
+        });
+    };
+
+    var sign = function sign(data) {
+        return $.ajax({
+            url: '/api/users/signin',
+            type: 'post',
+            data: data,
+            success: function success(result) {
+                console.log(result);
+
+                return result;
+            }
+        });
+    };
+
     module.exports = {
-        text: function text() {
-            var regEmall = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
-            var ologin_btn = document.getElementById("login_btn");
-            // 1.@之前必须有内容且只能是字母（大小写）、数字、下划线(_)、减号（-）、点（.）
-            // 2.@和最后一个点（.）之间必须有内容且只能是字母（大小写）、数字、点（.）、减号（-），且两个点不能挨着
-            // 3.最后一个点（.）之后必须有内容且内容只能是字母（大小写）、数字且长度为大于等于2个字节，小于等于6个字节
-            $("#emall").on("blur", function () {
-                var oEmall = $("#emall").val();
-                if (!regEmall.test(oEmall)) {
-                    $(".errMsg").css("opacity", 1);
-                    // $("#emall").val()="";
-                } else {
-                    $(".errMsg").css("opacity", 0);
-                }
-            });
-            ologin_btn.onclick = function () {
-                var oEmall = $("#emall").val();
-                var opwd = $("#password").val();
-            };
-        }
+        text: text
 
         /***/ };
 },,,,,,
@@ -178,7 +218,7 @@
 /* 10 */
 /***/function (module, exports) {
 
-    module.exports = "<div class=\"space\"></div><div class=\"login_main\">    <section class=\"clear\">        <div class=\"login_bg\"></div>        <div class=\"login_context\">            <div class=\"tip\">登录缘来，享受更多优惠</div>            <form action=\"\">                <input type=\"text\" name=\"log_username\" id=\"emall\" placeholder=\"邮箱\">                <span class=\"errMsg\">邮箱格式输入错误</span>                <input type=\"password\" name=\"log_pas\" id=\"password\"placeholder=\"密码\">                <button id=\"login_btn\" class=\"aa\">登录</button>                                                  </form>        </div>    </section></div>";
+    module.exports = "<div class=\"space\"></div><div class=\"login_main\">    <section class=\"clear\">        <div class=\"login_bg\"></div>        <div class=\"login_context\">            <div class=\"tip\">登录缘来，享受更多优惠</div>            <form action=\"\">                <input type=\"text\" name=\"log_username\" id=\"emall\" placeholder=\"邮箱\">                <span class=\"errMsg\">邮箱格式输入错误</span>                <input type=\"password\" name=\"log_pas\" id=\"password\"placeholder=\"密码\">                <div  id=\"login_btn\" class=\"aa\">登录</div>                                                  </form>        </div>    </section></div>";
 
     /***/
 }]
