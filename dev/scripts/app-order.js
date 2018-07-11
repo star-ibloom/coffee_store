@@ -3880,15 +3880,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
   indexController.headerAction();
   orderController.renderFirstLevel();
-  orderController.menuDelegation();
-  orderController.renderDrinks();
 
   /***/
 },
 /* 141 */
 /***/function (module, exports) {
 
-  module.exports = "<div class=\"orderMainOut\">    <div class=\"orderMain\">        <div class=\"orderList\">            <ul class=\"clear\" id=\"listul\">                <!-- <li class=\"fir_li\" >                    <a>咖啡</a>                    <ul class=\"clear\">                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                    </ul>                </li>                 -->            </ul>        </div>        <div class=\"orderContainer\">            <ul class=\"clear\">                <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <!-- <span id=\"is_cold\">冷</span>                    <span id=\"is_size\">大</span> -->                    <div class=\"goodPrice\">120元</div>                    <button data-id=${item.id}>立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>             </ul>        </div>    </div></div>";
+  module.exports = "<div class=\"orderMainOut\">    <div class=\"orderMain\">        <div class=\"orderList\">            <ul class=\"clear\" id=\"listul\">                <!-- <li class=\"fir_li\" >                    <a>咖啡</a>                    <ul class=\"clear\">                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                    </ul>                </li>                 -->            </ul>        </div>        <div class=\"orderContainer\">            <ul class=\"clear\">                <!-- <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <!-- <span id=\"is_cold\">冷</span>                    <span id=\"is_size\">大</span> -->                <!-- <div class=\"goodPrice\">120元</div>                    <button data-id=${item.id}>立即购买</button>                </li>  -->                <!-- <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button>立即购买</button>                </li> -->            </ul>        </div>    </div></div>";
 
   /***/
 },
@@ -3922,32 +3920,60 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
     // 渲染二级菜单
     renderSecondLevel: function renderSecondLevel(data) {
+      var _this2 = this;
+
       orderModel.getSecondLevel(data).then(function (resultSec) {
         var jsonSec = resultSec.res;
         var secondLevelLi = "";
         for (var i = 0; i < jsonSec.length; i++) {
-          secondLevelLi += '\n                <li class="sec_li" data_type=' + data.type + '>' + jsonSec[i] + '</li>\n                ';
+          secondLevelLi += '\n                <li class="sec_li" data-type=' + data.type + '>' + jsonSec[i] + '</li>\n                ';
         }
         $('#listul > li').eq('' + data.type).find('ul').html(secondLevelLi);
+        _this2.menuDelegation(data.type);
       });
     },
-    menuDelegation: function menuDelegation() {
-      $("#listul").on('click', $(".sec_li"), function (event) {
-        console.log(2);
+
+
+    // 二级菜单按钮事件
+    menuDelegation: function menuDelegation(data) {
+      var that = this;
+      $('.sec_li[data-type=' + data + ']').on('click', function (event) {
+        var index = $(this).attr('data-type');
+        var type = $(this).index();
+        switch (index) {
+          case "0":
+            orderModel.getDrinks({ type: type }).then(function (data) {
+              return that.renderProducts(data.data);
+            });
+            break;
+          case "1":
+            orderModel.getGourmet({ type: type }).then(function (data) {
+              return that.renderProducts(data.data);
+            });
+            break;
+          case "2":
+            orderModel.getperipheral({ type: type }).then(function (data) {
+              return that.renderProducts(data.data);
+            });
+            break;
+          default:
+            break;
+        }
       });
+      $('.sec_li:first').trigger('click');
     },
 
 
     // 渲染商品页
-    renderDrinks: function renderDrinks() {
-      var _this2 = this;
-
-      orderModel.getDrinks().then(function (resultDri) {
-        _this2.jsonDri = resultDri.data;
-        _this2.jsonDri.forEach(function (itemDir) {
-          // console.log(itemDir)
-        });
-      });
+    renderProducts: function renderProducts(data) {
+      console.log(data);
+      var html = "";
+      for (var i = 0; i < data.length; i++) {
+        html += '\n                <li class="goodInfo">\n                    <div class="goodImage"></div>\n                    <div class="goodName">' + data[i].name + '</div>\n                    <div class="goodPrice">' + data[i].price + '\u5143</div>\n                    <button >\u7ACB\u5373\u8D2D\u4E70</button>\n                </li> \n                ';
+      }
+      console.log($(".orderContainer > ul"));
+      console.log(html);
+      $(".orderContainer > ul").html(html);
     }
   };
 
