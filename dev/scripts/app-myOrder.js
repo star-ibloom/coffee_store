@@ -74,7 +74,7 @@
   /******/__webpack_require__.p = "";
   /******/
   /******/ // Load entry module and return exports
-  /******/return __webpack_require__(__webpack_require__.s = 17);
+  /******/return __webpack_require__(__webpack_require__.s = 18);
   /******/
 })(
 /************************************************************************/
@@ -121,12 +121,12 @@
     /***/
   },
 
-  /***/17:
+  /***/18:
   /***/function _(module, exports, __webpack_require__) {
 
     var indexTpl = __webpack_require__(0);
     var headerTpl = __webpack_require__(2);
-    var homeMyOrderTpl = __webpack_require__(18);
+    var homeMyOrderTpl = __webpack_require__(19);
 
     var indexController = __webpack_require__(1);
 
@@ -138,7 +138,7 @@
     /***/
   },
 
-  /***/18:
+  /***/19:
   /***/function _(module, exports) {
 
     module.exports = "<div class=\"myOrderOut\">    <div class=\"myOrder\">        <div class=\"tableInfo\">            <span class=\"tableFont\">桌号:</span>            <span class=\"tableId\">2</span>        </div>        <table class=\"orderTable\">            <tr>                <th>产品图片</th>                <th>产品名称</th>                <th>价格</th>                <th>数量</th>            </tr>            <tr>                <td><div class=\"orderImg\"></div></td>                <td>忒哦嗯咖啡</td>                <td>120</td>                <td>1</td>            </tr>            <tr>                <td><div class=\"orderImg\"></div></td>                <td>忒哦嗯咖啡</td>                <td>120</td>                <td>1</td>            </tr>            <tr>                <td><div class=\"orderImg\"></div></td>                <td>忒哦嗯咖啡</td>                <td>120</td>                <td>1</td>            </tr>            <tr>                <td><div class=\"orderImg\"></div></td>                <td>忒哦嗯咖啡</td>                <td>120</td>                <td>1</td>            </tr>        </table>        <div class=\"priceInfo\">            <span class=\"priceFont\">价格:</span>            <span class=\"price\">2202</span>            <a class=\"subOrder\">提交订单</a>        </div>    </div></div>";
