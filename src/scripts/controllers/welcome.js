@@ -3,6 +3,8 @@ module.exports={
    scroll : function(){
         var obg0 = document.getElementsByClassName("bg0")
         var obg1 = document.getElementsByClassName("bg1")
+        var obg2 = document.getElementsByClassName("bg2")
+
         var osection = document.getElementsByTagName("section")
         var ofooter = document.getElementsByTagName("footer")
         var obtn_toindex = document.getElementsByClassName("btn_toindex");
@@ -26,7 +28,7 @@ module.exports={
             }
             else if(scrolltop>osection[2].offsetTop&&scrolltop<ofooter[0].offsetTop){
                 var distance = scrolltop - osection[2].offsetTop
-                obg2[0].style.top = Math.floor(distance/2) + "px"
+                // obg2[0].style.top = Math.floor(distance/2) + "px"
             }
             else{
                 obg0[0].style.top=0;
