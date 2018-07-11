@@ -8,6 +8,7 @@ module.exports = {
             .then(resultFir => {
                 this.jsonFir = resultFir.res;
                 var firstLevelLi = "";
+                // console.log(jsonFir)
                 this.jsonFir.forEach(function (itemFir, index) {
                     firstLevelLi += `
                 <li class="fir_li">
