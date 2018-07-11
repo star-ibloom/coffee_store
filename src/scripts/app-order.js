@@ -10,7 +10,18 @@ document.getElementById('root').innerHTML = indexTpl
 document.querySelector('.container').innerHTML =  headerTpl + homeOrderTpl
 
 indexController.headerAction()
-orderController.firstListClick()
+// orderController.firstListClick()
 orderController.renderFirstLevel()
-orderController.renderSecondLevel()
+setTimeout(function(){
+orderController.renderSecondLevel({type:1})
+},10)
+setTimeout(function(){
+orderController.renderSecondLevel({type:0})
+},20)
+// setTimeout(function(){
+//     orderController.renderSecondLevel({type:2})
+//     },400)
+orderController.renderSecondLevel({type:2})
+
+
 orderController.renderDrinks()

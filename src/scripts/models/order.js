@@ -6,13 +6,12 @@ module.exports={
             success:result => result
         })
     },
-    getSecondLevel(){
+    getSecondLevel(data){
         return $.ajax({
             url:'/api/menu/secondlevel',
             type:"get",
-            // data:{
-            //     type:"0"
-        // }
+            data,
+            success:result => result
         })
     },
     getDrinks(){

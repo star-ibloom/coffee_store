@@ -151,9 +151,19 @@
     document.querySelector('.container').innerHTML = headerTpl + homeOrderTpl;
 
     indexController.headerAction();
-    orderController.firstListClick();
+    // orderController.firstListClick()
     orderController.renderFirstLevel();
-    orderController.renderSecondLevel();
+    setTimeout(function () {
+        orderController.renderSecondLevel({ type: 1 });
+    }, 10);
+    setTimeout(function () {
+        orderController.renderSecondLevel({ type: 0 });
+    }, 20);
+    // setTimeout(function(){
+    //     orderController.renderSecondLevel({type:2})
+    //     },400)
+    orderController.renderSecondLevel({ type: 2 });
+
     orderController.renderDrinks();
 
     /***/
@@ -170,11 +180,6 @@
 
     var orderModel = __webpack_require__(18);
     module.exports = {
-        firstListClick: function firstListClick() {
-            $(".fir_li>a").on("click", function () {
-                $(this).next().slideToggle();
-            });
-        },
         renderFirstLevel: function renderFirstLevel() {
             var _this = this;
 
@@ -183,33 +188,78 @@
                 var firstLevelLi = "";
                 _this.jsonFir.forEach(function (itemFir, index) {
                     // console.log(itemFir,index) 
-                    firstLevelLi += '\n                <li class="fir_li">\n                    <a>' + itemFir + '</a>\n                    <ul class="clear">\n                    </ul>\n                </li>\n                ';
+                    firstLevelLi += '\n                <li class="fir_li">\n                    <a>' + itemFir + '</a>\n                    <ul class="clear secul">\n                    </ul>\n                </li>\n                ';
                     // $("#list li:eq(index) a").innerHtml = itemFir
                 });
                 $("#listul").html(firstLevelLi);
+                $(".fir_li>a").on("click", function () {
+                    console.log(0);
+                    $(this).next().slideToggle();
+                });
+                orderController.renderSecondLevel({ type: 1 });
+                orderController.renderSecondLevel({ type: 0 });
+                orderController.renderSecondLevel({ type: 2 });
             });
         },
-        renderSecondLevel: function renderSecondLevel() {
-            var _this2 = this;
+        renderSecondLevel: function renderSecondLevel(data) {
 
-            orderModel.getSecondLevel().then(function (resultSec) {
-                _this2.jsonSec = resultSec.res;
-                // var code = resultSec.code
-                // console.log(code)
+            orderModel.getSecondLevel(data).then(function (resultSec) {
+                var jsonSec = resultSec.res;
+
                 var secondLevelLi = "";
-                _this2.jsonSec.forEach(function (itemSec) {
-                    // console.log(itemSec,code)
-                    secondLevelLi += '\n                <li class="sec_li">' + itemSec + '</li>\n                ';
+                // setTimeout(() => {
+                jsonSec.forEach(function (itemSec) {
+
+                    secondLevelLi += '\n                <li class="sec_li" data_type=' + data.type + '>' + itemSec + '</li>\n                ';
                 });
-                $("#listul li:eq(0) ul").html(secondLevelLi);
+                $('#listul li:eq(' + data.type + ') ul').html(secondLevelLi);
+
+                // $(".secul")[data.type].html(secondLevelLi)
+                console.log($(".secul")[data.type]);
             });
+
+            // orderModel.getSecondLevel({type:1})
+            // .then(resultSec=>{
+            //     var jsonSec = resultSec.res;
+            //     // var code = resultSec.code
+            //     // console.log(code)
+            //     var secondLevelLi = "";
+            //     jsonSec.forEach(function(itemSec){
+            //         // console.log(itemSec,code)
+            //         secondLevelLi+=`
+            //         <li class="sec_li" data_type="1">${itemSec}</li>
+            //         `
+            //     })
+            //     console.log($(".secul")[1]);
+
+            //     $(".secul")[1].html("123    ")
+            // })
+
+            // orderModel.getSecondLevel({type:2})
+            // .then(resultSec=>{
+            //     var jsonSec = resultSec.res;
+            //     // var code = resultSec.code
+            //     // console.log(code)
+            //     var secondLevelLi = "";
+            //     jsonSec.forEach(function(itemSec){
+            //         // console.log(itemSec,code)
+            //         secondLevelLi+=`
+            //         <li class="sec_li" data_type="2">${itemSec}</li>
+            //         `
+            //     })
+            //     console.log(secondLevelLi)
+            //     // console.log($("#listul li:eq(2) ul"));
+
+            //     $("#listul li:eq(2) ul").html(secondLevelLi)
+            // })
         },
         renderDrinks: function renderDrinks() {
-            var _this3 = this;
+            var _this2 = this;
 
+            // $("#listul li:eq(0) ul").html(secondLevelLi)
             orderModel.getDrinks().then(function (resultDri) {
-                _this3.jsonDri = resultDri.data;
-                _this3.jsonDri.forEach(function (itemDir) {
+                _this2.jsonDri = resultDri.data;
+                _this2.jsonDri.forEach(function (itemDir) {
                     console.log(itemDir);
                 });
             });
@@ -231,13 +281,14 @@
                 }
             });
         },
-        getSecondLevel: function getSecondLevel() {
+        getSecondLevel: function getSecondLevel(data) {
             return $.ajax({
                 url: '/api/menu/secondlevel',
-                type: "get"
-                // data:{
-                //     type:"0"
-                // }
+                type: "get",
+                data: data,
+                success: function success(result) {
+                    return result;
+                }
             });
         },
         getDrinks: function getDrinks() {
