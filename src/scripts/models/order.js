@@ -10,19 +10,18 @@ module.exports={
         return $.ajax({
             url:'/api/menu/secondlevel',
             type:"get",
-            data:{
-                type:"0"
-            },
-            success:result => result
+            // data:{
+            //     type:"0"
+        // }
         })
     },
     getDrinks(){
         return $.ajax({
             url:'/api/prod/drinks',
             type:"get",
-            data:{
-                type:"0"
-            },
+            // data:{
+            //     type:"0"
+            // },
             success:result => result
         })
     },

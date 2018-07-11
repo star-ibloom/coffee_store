@@ -7,29 +7,48 @@ module.exports={
     },
     renderFirstLevel(){
         orderModel.getFirstLevel()
-        .then(resultfir=>{
-            this.jsonfir = resultfir.res;
-            this.jsonfir.forEach(function(itemfir){
-                console.log(itemfir)
+        .then(resultFir=>{
+            this.jsonFir = resultFir.res;
+            var firstLevelLi = "";
+            this.jsonFir.forEach(function(itemFir,index){
+                // console.log(itemFir,index) 
+                firstLevelLi +=`
+                <li class="fir_li">
+                    <a>${itemFir}</a>
+                    <ul class="clear">
+                    </ul>
+                </li>
+                `
+                // $("#list li:eq(index) a").innerHtml = itemFir
             })
+            $("#listul").html(firstLevelLi)
         })
     },
     renderSecondLevel(){
         orderModel.getSecondLevel()
-        .then(resultsec=>{
-            this.jsonsec = resultsec.res;
-            this.jsonsec.forEach(function(itemsec){
-                console.log(itemsec)
+        .then(resultSec=>{
+            this.jsonSec = resultSec.res;
+            // console.log(resultSec.code)
+            var code = resultSec.code
+            console.log(code)
+            var secondLevelLi = "";
+            this.jsonSec.forEach(function(itemSec){
+                // console.log(itemSec,code)
+                secondLevelLi+=`
+                <li class="sec_li">${itemSec}</li>
+                `
             })
+            $("#listul li:eq(0) ul").html(secondLevelLi)
         })
     },
     renderDrinks(){
         orderModel.getDrinks()
-        .then(result=>{
-            this.json = result.data;
-            this.json.forEach(function(item){
-                console.log(item)
+        .then(resultDri=>{
+            this.jsonDri = resultDri.data;
+            this.jsonDri.forEach(function(itemDir){
+                console.log(itemDir)
             })
+            
         })
     }
 }

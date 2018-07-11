@@ -160,7 +160,7 @@
 /* 15 */
 /***/function (module, exports) {
 
-    module.exports = "<div class=\"orderMainOut\">    <div class=\"orderMain\">        <div class=\"orderList\">            <ul class=\"clear\">                <li class=\"fir_li\">                    <a>咖啡</a>                    <ul class=\"clear\">                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                    </ul>                </li>                <li class=\"fir_li\">                    <a>咖啡</a>                    <ul class=\"clear\">                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                    </ul>                </li>                <li class=\"fir_li\">                    <a>咖啡</a>                    <ul class=\"clear\">                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                    </ul>                </li>                <li class=\"fir_li\">                    <a>咖啡</a>                    <ul class=\"clear\">                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                    </ul>                </li>            </ul>        </div>        <div class=\"orderContainer\">            <ul class=\"clear\">                <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <!-- <span id=\"is_cold\">冷</span>                    <span id=\"is_size\">大</span> -->                    <div class=\"goodPrice\">120元</div>                    <button data-id=${item.id}>立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>             </ul>        </div>    </div></div>";
+    module.exports = "<div class=\"orderMainOut\">    <div class=\"orderMain\">        <div class=\"orderList\">            <ul class=\"clear\" id=\"listul\">                <!-- <li class=\"fir_li\" >                    <a>咖啡</a>                    <ul class=\"clear\">                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                        <li class=\"sec_li\">二级菜单</li>                    </ul>                </li>                 -->            </ul>        </div>        <div class=\"orderContainer\">            <ul class=\"clear\">                <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <!-- <span id=\"is_cold\">冷</span>                    <span id=\"is_size\">大</span> -->                    <div class=\"goodPrice\">120元</div>                    <button data-id=${item.id}>立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>                 <li class=\"goodInfo\">                    <div class=\"goodImage\"></div>                    <div class=\"goodName\">咖啡咖啡给飞机打</div>                    <div class=\"goodPrice\">120元</div>                    <button >立即购买</button>                </li>             </ul>        </div>    </div></div>";
 
     /***/
 },
@@ -177,30 +177,40 @@
         renderFirstLevel: function renderFirstLevel() {
             var _this = this;
 
-            orderModel.getFirstLevel().then(function (resultfir) {
-                _this.jsonfir = resultfir.res;
-                _this.jsonfir.forEach(function (itemfir) {
-                    console.log(itemfir);
+            orderModel.getFirstLevel().then(function (resultFir) {
+                _this.jsonFir = resultFir.res;
+                var firstLevelLi = "";
+                _this.jsonFir.forEach(function (itemFir, index) {
+                    // console.log(itemFir,index) 
+                    firstLevelLi += '\n                <li class="fir_li">\n                    <a>' + itemFir + '</a>\n                    <ul class="clear">\n                    </ul>\n                </li>\n                ';
+                    // $("#list li:eq(index) a").innerHtml = itemFir
                 });
+                $("#listul").html(firstLevelLi);
             });
         },
         renderSecondLevel: function renderSecondLevel() {
             var _this2 = this;
 
-            orderModel.getSecondLevel().then(function (resultsec) {
-                _this2.jsonsec = resultsec.res;
-                _this2.jsonsec.forEach(function (itemsec) {
-                    console.log(itemsec);
+            orderModel.getSecondLevel().then(function (resultSec) {
+                _this2.jsonSec = resultSec.res;
+                // console.log(resultSec.code)
+                var code = resultSec.code;
+                console.log(code);
+                var secondLevelLi = "";
+                _this2.jsonSec.forEach(function (itemSec) {
+                    // console.log(itemSec,code)
+                    secondLevelLi += '\n                <li class="sec_li">' + itemSec + '</li>\n                ';
                 });
+                $("#listul li:eq(0) ul").html(secondLevelLi);
             });
         },
         renderDrinks: function renderDrinks() {
             var _this3 = this;
 
-            orderModel.getDrinks().then(function (result) {
-                _this3.json = result.data;
-                _this3.json.forEach(function (item) {
-                    console.log(item);
+            orderModel.getDrinks().then(function (resultDri) {
+                _this3.jsonDri = resultDri.data;
+                _this3.jsonDri.forEach(function (itemDir) {
+                    console.log(itemDir);
                 });
             });
         }
@@ -224,22 +234,19 @@
         getSecondLevel: function getSecondLevel() {
             return $.ajax({
                 url: '/api/menu/secondlevel',
-                type: "get",
-                data: {
-                    type: "0"
-                },
-                success: function success(result) {
-                    return result;
-                }
+                type: "get"
+                // data:{
+                //     type:"0"
+                // }
             });
         },
         getDrinks: function getDrinks() {
             return $.ajax({
                 url: '/api/prod/drinks',
                 type: "get",
-                data: {
-                    type: "0"
-                },
+                // data:{
+                //     type:"0"
+                // },
                 success: function success(result) {
                     return result;
                 }

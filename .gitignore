@@ -1,5 +1,6 @@
 node_modules/
 yo/
+dev/*
 .git
 .project
 yarn-error.log
