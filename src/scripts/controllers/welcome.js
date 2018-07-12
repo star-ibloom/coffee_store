@@ -9,7 +9,7 @@ module.exports = {
         var ofooter = document.getElementsByTagName("footer")
         var obtn_toindex = document.getElementsByClassName("btn_toindex");
         obtn_toindex[0].onclick = function () {
-            location.pathname = "/home.html"
+            location.href = "/public/home.html"
         }
 
         window.onscroll = function () {
