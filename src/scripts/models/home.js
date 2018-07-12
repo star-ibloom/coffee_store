@@ -6,10 +6,12 @@ module.exports = {
             success: result => result
         })
     },
-    getHottest() {
+    getHottest(data) {
         return $.ajax({
             url: '/api/prod/hottest',
-            type: "get",
+            type: "POST",
+            data,
+            contentType: "application/json; charset=utf-8",
             success: result => result
         })
     }

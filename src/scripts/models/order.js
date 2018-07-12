@@ -9,7 +9,8 @@ module.exports = {
     getSecondLevel(data) {
         return $.ajax({
             url: '/api/menu/secondlevel',
-            type: "get",
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
             data,
             success: result => result
         })
@@ -17,7 +18,8 @@ module.exports = {
     getDrinks(data) {
         return $.ajax({
             url: '/api/prod/drinks',
-            type: "get",
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
             data,
             success: result => result
         })
@@ -25,7 +27,8 @@ module.exports = {
     getGourmet(data) {
         return $.ajax({
             url: '/api/prod/gourmet',
-            type: "get",
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
             data,
             success: result => result
         })
@@ -33,7 +36,8 @@ module.exports = {
     getPeripheral(data) {
         return $.ajax({
             url: '/api/prod/peripheral',
-            type: "get",
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
             data,
             success: result => result
         })
