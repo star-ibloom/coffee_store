@@ -6,12 +6,12 @@ const indexController = {
         $(this).addClass('active').siblings().removeClass('active');
       })
       switch(location.pathname.substr(1)){
-        case  "home.html" : $('header li').eq(0).addClass("active");break;
-        case  "order.html" : $('header li').eq(1).addClass("active");break;
-        case  "myOrder.html" : $('header li').eq(2).addClass("active");break;
+        case  "public/home.html" : $('header li').eq(0).addClass("active");break;
+        case  "public/order.html" : $('header li').eq(1).addClass("active");break;
+        case  "public/myOrder.html" : $('header li').eq(2).addClass("active");break;
         // case  "changeTable.html" : $('header li').eq(3).addClass("active");break;
-        case  "login.html" : $('header li').eq(3).addClass("active");break;
-        case  "welcome.html" : $('header li').eq(4).addClass("active");break;
+        case  "public/login.html" : $('header li').eq(3).addClass("active");break;
+        case  "public/welcome.html" : $('header li').eq(4).addClass("active");break;
         default:return;
       }
     }
