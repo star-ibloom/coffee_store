@@ -8,11 +8,6 @@ const webpack = require('webpack-stream')
 
 const proxy = require('http-proxy-middleware')
 
-const babel = require('gulp-babel')
-
-const polyfill = require("babel-polyfill");
-
-
 gulp.task('server', () => {
     return gulp.src('./dev')
         .pipe(server({
@@ -28,49 +23,28 @@ gulp.task('server', () => {
                     target: 'http://localhost:9000',
                     changeOrigin: true,
                 })
-
-
-                // http://m.vmall.com/content/index/more.json?pageNumber=2&contentType=2
             ]
         }))
 })
 
 gulp.task('scss', () => {
     return gulp.src('./src/styles/*.scss')
-        .pipe(sass().on('error', sass.logError))
-
+        .pipe(sass({ outputStyle: "compressed" }).on('error', sass.logError))
         .pipe(gulp.dest('./dev/styles'))
-
 })
 
 gulp.task('css', () => {
     return gulp.src('./src/styles/*.css')
-        //  .pipe(sass().on('error',sass.logError))
-
         .pipe(gulp.dest('./dev/styles'))
-
 })
 
 gulp.task('js', () => {
     return gulp.src('./src/scripts/*.js')
-        //  .pipe(webpack({         
-        //      entry:'./src/scripts/app.js',
-        //      output:{
-        //          filename: 'app.js'
-        //      },
-        //      module:{
-        //          loaders:[
-        //              {test:/\.html$/, loader:'string-loader'},
-        //          ]
-        //      }
-        //  }))
         .pipe(webpack({
             entry: {
-                //   app: './src/scripts/app.js',
                 'app-welcome': './src/scripts/app-welcome.js',
                 'app-home': './src/scripts/app-home.js',
                 'app-login': './src/scripts/app-login.js',
-                'app-swiper': './src/scripts/swiper.min.js',
                 'app-register': './src/scripts/app-register.js',
                 'app-order': './src/scripts/app-order.js',
                 'app-myOrder': './src/scripts/app-myOrder.js',
@@ -84,19 +58,8 @@ gulp.task('js', () => {
                 ],
             }
         }))
-        .pipe(babel({
-            presets: ['env']
-        }))
         .pipe(gulp.dest('./dev/scripts'))
 })
-
-//      .pipe(babel({
-//          presets:['env']
-//      }))  
-//      .pipe(gulp.dest('./dev/scripts'))
-
-// })
-
 
 gulp.task('copyhtml', () => {
     return gulp.src(['./*.html'])

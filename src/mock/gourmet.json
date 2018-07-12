@@ -1,5 +1,4 @@
 {
-
     "res": true,
     "code": 0,
     "data": [
@@ -7,7 +6,7 @@
             "id": 33,
             "name": "美式松饼",
             "price": 30,
-            "membershipprice": 24,
+            "membershipPrice": 24,
             "sellingNum": 31,
             "intro": null,
             "goodImg": null,
@@ -17,7 +16,7 @@
             "id": 34,
             "name": "蓝莓麦芬",
             "price": 28,
-            "membershipprice": 22,
+            "membershipPrice": 22,
             "sellingNum": 3,
             "intro": null,
             "goodImg": null,
@@ -27,7 +26,7 @@
             "id": 35,
             "name": "法式香酥可颂",
             "price": 28,
-            "membershipprice": 22,
+            "membershipPrice": 22,
             "sellingNum": 0,
             "intro": null,
             "goodImg": null,
@@ -37,7 +36,7 @@
             "id": 36,
             "name": "层层榛子果仁酥",
             "price": 28,
-            "membershipprice": 22,
+            "membershipPrice": 22,
             "sellingNum": 13,
             "intro": null,
             "goodImg": null,
@@ -47,7 +46,7 @@
             "id": 37,
             "name": "香酥巧克力可颂",
             "price": 28,
-            "membershipprice": 22,
+            "membershipPrice": 22,
             "sellingNum": 0,
             "intro": null,
             "goodImg": null,
@@ -57,12 +56,11 @@
             "id": 38,
             "name": "全麦核桃麦芬",
             "price": 28,
-            "membershipprice": 22,
+            "membershipPrice": 22,
             "sellingNum": 0,
             "intro": null,
             "goodImg": null,
             "isNew": "y"
         }
     ]
-
 }

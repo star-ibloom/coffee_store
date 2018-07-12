@@ -30,7 +30,7 @@ module.exports = {
             success: result => result
         })
     },
-    getperipheral(data) {
+    getPeripheral(data) {
         return $.ajax({
             url: '/api/prod/peripheral',
             type: "get",
