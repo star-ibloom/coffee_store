@@ -10,7 +10,7 @@ module.exports = {
         return $.ajax({
             url: '/api/prod/hottest',
             type: "POST",
-            data,
+            data: JSON.stringify(data),
             contentType: "application/json; charset=utf-8",
             success: result => result
         })

@@ -11,7 +11,7 @@ module.exports = {
             url: '/api/menu/secondlevel',
             type: "POST",
             contentType: "application/json; charset=utf-8",
-            data,
+            data: JSON.stringify(data),
             success: result => result
         })
     },
@@ -20,7 +20,7 @@ module.exports = {
             url: '/api/prod/drinks',
             type: "POST",
             contentType: "application/json; charset=utf-8",
-            data,
+            data: JSON.stringify(data),
             success: result => result
         })
     },
@@ -29,7 +29,7 @@ module.exports = {
             url: '/api/prod/gourmet',
             type: "POST",
             contentType: "application/json; charset=utf-8",
-            data,
+            data: JSON.stringify(data),
             success: result => result
         })
     },
@@ -38,7 +38,7 @@ module.exports = {
             url: '/api/prod/peripheral',
             type: "POST",
             contentType: "application/json; charset=utf-8",
-            data,
+            data: JSON.stringify(data),
             success: result => result
         })
     },

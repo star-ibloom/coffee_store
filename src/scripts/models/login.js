@@ -3,7 +3,7 @@ const login = (data) => {
     url: '/api/users/login',
     type: 'POST',
     contentType: "application/json; charset=utf-8",
-    data,
+    data: JSON.stringify(data),
     success: result => result
   })
 }
