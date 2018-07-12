@@ -108,7 +108,6 @@ module.exports = {
                         cartList.push({ goodId, goodNum })
                     }
                     wsCache.set('cartList', JSON.stringify(cartList));
-                    console.log(cartList);
                 } else { // 如果不存在cartList则新建
                     let arr = []
                     let goodNum = 1
