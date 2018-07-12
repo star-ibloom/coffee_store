@@ -7,12 +7,13 @@ const homeController = {
                 var jsonNew = result.data.drinks;
                 var html = '';
                 for (let i = 0; i < jsonNew.length; i++) {
+                    console.log(jsonNew[i].goodImg);
                     html += `
-                <li>
-                <img src="${jsonNew[i].imgPath}">
-                <p>${jsonNew[i].name}</p>
-                </li>
-                `
+                            <li>
+                                <img src="${jsonNew[i].goodImg}">
+                                <p>${jsonNew[i].name}</p>
+                            </li>
+                            `
                 }
                 $(".hot-single-list").eq(0).html(html)
             })

@@ -74,7 +74,7 @@ module.exports = {
         for (var i = 0; i < data.length; i++) {
             html += `
                 <li class="goodInfo">
-                    <div class="goodImage"></div>
+                    <div class="goodImage"><img src="${data[i].goodImg}"></div>
                     <div class="goodName">${data[i].name}</div>
                     <div class="goodPrice">${data[i].price}元</div>
                     <div class="goodPriceVip">会员价:${data[i].membershipPrice}元</div>

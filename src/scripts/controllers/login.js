@@ -33,7 +33,11 @@ const login = function () {
             password: $("#password").val()
         }
         if (username && password) {
-            let result = await loginModel.login({ username, password })
+            let userinfo = {
+                "username": username,
+                "password": password
+            }
+            let result = await loginModel.login(userinfo)
             if (result.res) {
                 // create WebStorageCache instance.
                 var wsCache = new WebStorageCache();
