@@ -4,6 +4,7 @@ const singin =  function(){
 
     var oEmall = $("#emall").val();
     var opwd = $("#password").val(); 
+    var canRe ;
     var phonereg=/^[1][3,4,5,7,8][0-9]{9}$/;
     var regEmall = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
     var singin_btn = document.getElementById("singin_btn");
@@ -14,47 +15,47 @@ const singin =  function(){
         var oEmall = $("#emall").val();
         if(!regEmall.test(oEmall)){
              $(".errMsg").css("opacity",1)
+             canRe=false;
             // $("#emall").val()="";
         }else{
             $(".errMsg").css("opacity",0)
+            canRe = true
         }
     })
     $("#username").on("blur",function(){
     var userName = $("#username").val()           
         if(!phonereg.test(userName)){
              $(".phoneerrMsg").css("opacity",1)
+             canRe=false;
             // $("#emall").val()="";
         }else{
             $(".phoneerrMsg").css("opacity",0)
+            canRe = true
         }
     })
   
   
   
   $("#singin_btn").on("click" ,function(){
-  console.log(2)
-    let { username, password, e_mail } = {
+    let { username, password, email} = {
         username: $("#username").val(),
         password: $("#password").val(),
-        e_mail: $("#emall").val()
+        email: $("#emall").val()
         }
-    console.log({ username, password, e_mail });
-    
-  let result =  sinGin({ username, password, e_mail }, "signin") 
-  console.log(result)          
-  
+    console.log({ username, password, email });
+    if(canRe){
+        let result =  sinGin({ username, password, email }, "signin") 
+        console.log(result)          
+    }
       })
   }
   const sinGin = (data) => {
       return $.ajax({
-        url: '/api/users/lognin',
+        url: '/api/users/register',
         type: 'post',
-        data,
-        success: (result) => {
-          console.log(result)
-  
-          return result
-        }
+        contentType: "application/json; charset=utf-8",
+        data:JSON.stringify(data),
+        success: result=>result
       })
   }
   module.exports = {
