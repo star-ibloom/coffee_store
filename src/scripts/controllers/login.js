@@ -49,7 +49,7 @@ const login = function () {
                 // 登录成功后自动跳转页面至点餐页
                 setTimeout(function () {
                     d.close().remove();
-                    var url = '/order.html'
+                    var url = 'public/order.html'
                     location.href = url
                 }, 2000);
             } else {
