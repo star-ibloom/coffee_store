@@ -11,3 +11,4 @@ document.querySelector('.container').innerHTML = headerTpl + homeOrderTpl
 
 indexController.headerAction()
 orderController.renderFirstLevel()
+orderController.addToCartButtonEvent()

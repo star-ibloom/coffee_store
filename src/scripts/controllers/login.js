@@ -1,4 +1,6 @@
-const text = function () {
+const loginModel = require('../models/login')
+
+const login = function () {
     var oEmall = $("#emall").val();
     var opwd = $("#password").val();
     var phonereg = /^[1][3,4,5,7,8][0-9]{9}$/;
@@ -25,35 +27,48 @@ const text = function () {
     })
 
     //登陆的逻辑登陆的逻辑登陆的逻辑登陆的逻辑登陆的逻辑登陆的逻辑登陆的逻辑
-    $("#login_btn").on("click", function () {
+    $("#login_btn").on("click", async function () {
         let { username, password } = {
             username: $("#emall").val(),
             password: $("#password").val()
         }
         if (username && password) {
-            let result = sign({ username, password }, "signin")
+            let result = await loginModel.login({ username, password })
+            if (result.res) {
+                // create WebStorageCache instance.
+                var wsCache = new WebStorageCache();
+                wsCache.set('haslogin', true);
+                var d = dialog({
+                    content: '登录成功！即将为您跳转至点餐页面~(＾－＾)'
+                });
+                d.showModal();
+                // 登录成功后自动跳转页面至点餐页
+                setTimeout(function () {
+                    d.close().remove();
+                    var url = '/order.html'
+                    location.href = url
+                }, 2000);
+            } else {
+                var d = dialog({
+                    content: '请输入有效的邮箱和密码！'
+                });
+                d.showModal();
+                setTimeout(function () {
+                    d.close().remove();
+                }, 2000);
+            }
         } else {
             var d = dialog({
-                title: 'message',
-                content: '请输入用户名和密码！'
+                content: '请输入有效的邮箱和密码！'
             });
             d.showModal();
-        }
-    })
-}
-
-const sign = (data) => {
-    return $.ajax({
-        url: '/api/users/signin',
-        type: 'get',
-        data,
-        success: (result) => {
-            console.log(result)
-            return result
+            setTimeout(function () {
+                d.close().remove();
+            }, 2000);
         }
     })
 }
 
 module.exports = {
-    text
+    login
 }
