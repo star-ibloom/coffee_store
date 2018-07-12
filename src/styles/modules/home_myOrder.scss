@@ -1,10 +1,12 @@
  .myOrderOut{
      width:100%;
-     margin:38px auto;
+     margin-bottom: 38px;
+     margin-top: 38px;
     //  background: yellow;
      .myOrder{
-         position: relative;    
+         position: relative;     
          width: 1100px;
+         min-height: 500px;
         //  background: pink;
          margin: 0 auto;
         margin-top: 5px;
@@ -34,7 +36,9 @@
                 margin-bottom: 10px;
             } 
             th{
+                
                 border-bottom: 1px solid #333;
+                vertical-align: bottom
             }
             td{
                 font-size: 18px;
@@ -69,8 +73,9 @@
         .priceInfo{
             position: absolute;
             right: 100px;
-            margin-top: 50px;
-            .priceFont{
+            bottom: -136px;  
+            margin-bottom: 50px;
+            .priceFont{  
                 font-size: 20px; 
             }
             .price{
@@ -79,17 +84,21 @@
                 margin-right: 5px;
             }
             .subOrder{ 
-                border-radius: 5px;
                 box-sizing: border-box;
                 background: #eee;
-                width: 88px;
-                height: 24px;
-                line-height: 24px;
+                width: 128px;
+                height: 36px;
+                line-height: 36px;
                 float: right;
                 text-align: center;
                 font-size: 18px;
                 margin-left: 20px;
-                margin-top: -6px;
+                margin-top: -12px;
+                &:hover{
+                    background: #8f2626;
+                    color: white;
+                    transition: .3s;
+                }
             }
         } 
      }
