@@ -10,10 +10,8 @@ main{
         vertical-align: top;
         position: relative;
         width: 100%;
-        // overflow: hidden;
         height: 680px;
         article{
-            // background: #333;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -30,17 +28,14 @@ main{
                 background-position-x: 90px; 
                 margin: 0 auto;
                 text-align: center;
-                // transform: translateX(50%)
             }
             h1{
-                // font-family: '黑体';
                 font-family: 'Microsoft YaHei';
                 font-weight: normal;
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 font-size: 60px;
                 height: 80px;
-                // margin-top: -10px;
             }
             p{
                 font-family: '黑体';
@@ -77,7 +72,6 @@ main{
             position: absolute;
             left: 0;
             top: 0;
-            // background: url(../static/images/panel_bg_locations.jpg);
             background: url(../static/images/panel_bg_loyalty.jpg);
             background-size: cover;
             // height: 120%;
@@ -86,7 +80,6 @@ main{
             z-index: 0;
         }
         .bg2{
-            // background: url(../static/images/panel_bg_loyalty.jpg);
             background: url(../static/images/panel_bg_locations.jpg);
             background-size: cover;
         }
@@ -108,7 +101,6 @@ footer{
             float: left;
             height: 100%;
             width: 400px;
-            // margin-left: 300px;
             background: url(../static/images/logo.png) no-repeat center;
             background-position-x: 20px;
             background-size: 100% auto;

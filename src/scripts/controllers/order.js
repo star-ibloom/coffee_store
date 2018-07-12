@@ -77,7 +77,7 @@ module.exports = {
                     <div class="goodImage"></div>
                     <div class="goodName">${data[i].name}</div>
                     <div class="goodPrice">${data[i].price}元</div>
-                    <div class="goodPrice">会员价:${data[i].membershipPrice}元</div>
+                    <div class="goodPriceVip">会员价:${data[i].membershipPrice}元</div>
                     <button data-id="${data[i].id}">立即购买</button>
                 </li> 
                 `
