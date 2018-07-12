@@ -33,6 +33,22 @@ const homeController = {
             $(".hot-single-list").eq(1).html(html)
 
         })
+    },
+    nextPic(){
+        var t ;
+        setTimeout(function(){
+            t=setInterval(function(){
+                $(".swiper-button-next").click()
+            },3000)
+        },2000)
+        $(".swiper-container").on("mousemove",function(){
+            clearInterval(t)
+        })
+        $(".swiper-container").on("mouseleave",function(){
+            t=setInterval(function(){
+                $(".swiper-button-next").click()
+            },3000)
+        })
     }
 }
 module.exports = homeController

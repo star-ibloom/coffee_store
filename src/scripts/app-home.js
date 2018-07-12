@@ -11,12 +11,13 @@ document.querySelector('.container').innerHTML = headerTpl + homeTpl
 indexController.headerAction()
 homeController.renderNewest()
 homeController.renderHottest()
+homeController.nextPic()
 
 var mySwiper = new Swiper('.swiper-container', {
   direction: 'horizontal',
   loop: true,
   // 如果需要分页器
-  pagination: {
+  pagination: { 
     el: '.swiper-pagination',
     paginationClickable: true,
   },
