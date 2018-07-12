@@ -91,15 +91,29 @@ module.exports = {
                 let wsCache = new WebStorageCache()
                 let wsCartList = wsCache.get('cartList')
                 let goodId = event.target.getAttribute('data-id')
-                if (wsCartList) {
+
+                if (wsCartList) { // 如果cartList存在
                     let cartList = JSON.parse(wsCartList)
-                    cartList.push(goodId)
+                    let hasOrdered = false
+                    // 遍历缓存，是否为已点商品
+                    cartList.forEach(function (item, index) {
+                        if (item.goodId == goodId) {
+                            hasOrdered = true
+                            item.goodNum += 1
+                        }
+                    })
+                    // 如果没有点过
+                    if (!hasOrdered) {
+                        let goodNum = 1
+                        cartList.push({ goodId, goodNum })
+                    }
                     wsCache.set('cartList', JSON.stringify(cartList));
                     console.log(cartList);
-                } else {
+                } else { // 如果不存在cartList则新建
                     let arr = []
-                    arr.push(goodId)
-                    wsCache.set('cartList', JSON.stringify(arr));
+                    let goodNum = 1
+                    arr.push({ goodId, goodNum })
+                    wsCache.set('cartList', JSON.stringify(arr))
                 }
             }
         })
