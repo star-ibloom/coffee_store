@@ -3,6 +3,7 @@ const loginModel = require('../models/login')
 const login = function () {
     var oEmall = $("#emall").val();
     var opwd = $("#password").val();
+    var emall_true;
     var phonereg = /^[1][3,4,5,7,8][0-9]{9}$/;
     var regEmall = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
     var ologin_btn = document.getElementById("login_btn");
@@ -13,16 +14,10 @@ const login = function () {
         var oEmall = $("#emall").val();
         if (!regEmall.test(oEmall)) {
             $(".errMsg").css("opacity", 1)
+            emall_true = false
         } else {
             $(".errMsg").css("opacity", 0)
-        }
-    })
-    $("#username").on("blur", function () {
-        var userName = $("#username").val()
-        if (!phonereg.test(userName)) {
-            $(".phoneerrMsg").css("opacity", 1)
-        } else {
-            $(".phoneerrMsg").css("opacity", 0)
+            emall_true = true
         }
     })
 
@@ -32,11 +27,8 @@ const login = function () {
             username: $("#emall").val(),
             password: $("#password").val()
         }
-        if (username && password) {
-            let userinfo = {
-                "username": username,
-                "password": password
-            }
+        if (username && password && emall_true) {
+            let userinfo = { username, password }
             let result = await loginModel.login(userinfo)
             if (result.res) {
                 // create WebStorageCache instance.
@@ -49,7 +41,7 @@ const login = function () {
                 // 登录成功后自动跳转页面至点餐页
                 setTimeout(function () {
                     d.close().remove();
-                    var url = 'public/order.html'
+                    var url = '/public/order.html'
                     location.href = url
                 }, 2000);
             } else {
