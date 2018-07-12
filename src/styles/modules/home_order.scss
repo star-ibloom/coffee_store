@@ -53,7 +53,7 @@ body{
             ul{
                 margin-left: 5px;
                 .goodInfo:nth-child(4n){
-                    border-right:  #ccc solid 1px;
+                    border-right: 0;
                 }
                 .goodInfo{
                     overflow: hidden;
@@ -63,7 +63,7 @@ body{
                     margin-bottom: 20px;
                     position:relative;
                     box-sizing: border-box;
-                    border-left: #ccc solid 1px;
+                    border-right: #ccc solid 1px;
                     .goodImage{
                         width: 190px;
                         height: 190px;
@@ -107,6 +107,7 @@ body{
                         line-height:32px;
                         background: rgba($color: #000000, $alpha: 0.8);
                         color:white;
+                        outline: none;
                         border:0;
                         &:hover{
                             background: #8f2626;
