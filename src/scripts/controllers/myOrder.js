@@ -21,7 +21,7 @@ async function renderOrderList() {
     result.details.forEach((item, index) => {
       html += `
                 <tr>
-                    <td><div class="orderImg"></div></td>
+                    <td><div class="orderImg"><img src="${item.goodImg}"></div></td>
                     <td>${item.goodName}</td>
                     <td>${item.price}</td>
                     <td>

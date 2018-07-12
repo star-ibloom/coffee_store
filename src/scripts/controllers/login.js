@@ -14,22 +14,12 @@ const login = function () {
         var oEmall = $("#emall").val();
         if (!regEmall.test(oEmall)) {
             $(".errMsg").css("opacity", 1)
-            emall_true=false
+            emall_true = false
         } else {
             $(".errMsg").css("opacity", 0)
-            emall_true=true
+            emall_true = true
         }
     })
-    // $("#username").on("blur", function () {
-    //     var userName = $("#username").val()
-    //     if (!phonereg.test(userName)) {
-    //         $(".phoneerrMsg").css("opacity", 1)
-    //         emall_true=false
-    //     } else {
-    //         $(".phoneerrMsg").css("opacity", 0)
-    //         emall_true=true
-    //     }
-    // })
 
     //登陆的逻辑登陆的逻辑登陆的逻辑登陆的逻辑登陆的逻辑登陆的逻辑登陆的逻辑
     $("#login_btn").on("click", async function () {
@@ -37,9 +27,9 @@ const login = function () {
             username: $("#emall").val(),
             password: $("#password").val()
         }
-        console.log(username,password,emall_true)
         if (username && password && emall_true) {
-            let result = await loginModel.login({ username, password })
+            let userinfo = { username, password }
+            let result = await loginModel.login(userinfo)
             if (result.res) {
                 // create WebStorageCache instance.
                 var wsCache = new WebStorageCache();
@@ -51,7 +41,7 @@ const login = function () {
                 // 登录成功后自动跳转页面至点餐页
                 setTimeout(function () {
                     d.close().remove();
-                    var url = '/order.html'
+                    var url = '/public/order.html'
                     location.href = url
                 }, 2000);
             } else {
