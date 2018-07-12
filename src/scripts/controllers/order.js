@@ -1,5 +1,4 @@
 const orderModel = require('../models/order')
-require("babel-polyfill")
 
 module.exports = {
     // 渲染一级菜单
@@ -8,7 +7,6 @@ module.exports = {
             .then(resultFir => {
                 this.jsonFir = resultFir.res;
                 var firstLevelLi = "";
-                // console.log(jsonFir)
                 this.jsonFir.forEach(function (itemFir, index) {
                     firstLevelLi += `
                 <li class="fir_li">
@@ -60,7 +58,7 @@ module.exports = {
                         .then(data => that.renderProducts(data.data))
                     break;
                 case "2":
-                    orderModel.getperipheral({ type })
+                    orderModel.getPeripheral({ type })
                         .then(data => that.renderProducts(data.data))
                     break;
                 default:
@@ -72,7 +70,6 @@ module.exports = {
 
     // 渲染商品页
     renderProducts(data) {
-        console.log(data)
         var html = ""
         for (var i = 0; i < data.length; i++) {
             html += `
@@ -80,12 +77,11 @@ module.exports = {
                     <div class="goodImage"></div>
                     <div class="goodName">${data[i].name}</div>
                     <div class="goodPrice">${data[i].price}元</div>
-                    <button >立即购买</button>
+                    <div class="goodPrice">会员价:${data[i].membershipPrice}元</div>
+                    <button data-id="${data[i].id}">立即购买</button>
                 </li> 
                 `
         }
-        console.log($(".orderContainer > ul"));
-        console.log(html);
         $(".orderContainer > ul").html(html)
     }
 }
