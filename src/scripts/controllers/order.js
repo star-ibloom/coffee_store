@@ -83,5 +83,25 @@ module.exports = {
                 `
         }
         $(".orderContainer > ul").html(html)
+    },
+
+    addToCartButtonEvent() {
+        $(".orderContainer > ul").on('click', function (event) {
+            if (event.target.nodeName == 'BUTTON') {
+                let wsCache = new WebStorageCache()
+                let wsCartList = wsCache.get('cartList')
+                let goodId = event.target.getAttribute('data-id')
+                if (wsCartList) {
+                    let cartList = JSON.parse(wsCartList)
+                    cartList.push(goodId)
+                    wsCache.set('cartList', JSON.stringify(cartList));
+                    console.log(cartList);
+                } else {
+                    let arr = []
+                    arr.push(goodId)
+                    wsCache.set('cartList', JSON.stringify(arr));
+                }
+            }
+        })
     }
 }

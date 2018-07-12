@@ -6,8 +6,8 @@ const indexController = require('./controllers/index.js')
 const loginController = require('./controllers/login.js')
 
 
-document.getElementById('root').innerHTML  = indexTpl
-document.querySelector('.container').innerHTML =  headerTpl + homeLoginTpl
+document.getElementById('root').innerHTML = indexTpl
+document.querySelector('.container').innerHTML = headerTpl + homeLoginTpl
 
 indexController.headerAction()
-loginController.text()
+loginController.login()
