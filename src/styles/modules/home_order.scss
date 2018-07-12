@@ -1,29 +1,33 @@
 .orderMainOut{
+    background: #ddd;
     margin-top:38px;
     width: 100%;
     .orderMain{
         width: 1100px;
-        background: yellow;
         margin: 0 auto;
         .orderList{
             width:220px;
             float: left;
             ul{ 
+                color: #555;
                 .fir_li{
                     a{
                         width: 220px;
                         display: block;
                         font-size: 16px;
                         line-height: 30px;
-                        background: yellow;
+                        background: #ae8648;
+                        border-top-left-radius:10px;
+                        border-top-right-radius:10px;
+                        
                     }
                     width:220px;
                     float: left;
                     font-size: 16px;
-                    background: pink;
                     box-sizing: border-box;
                     border: 1px solid #333;
-                    text-align: center;
+                    border-radius: 10px;
+                    text-align: center; 
                     line-height: 30px;
                     margin-bottom: 5px;
                     cursor: pointer;  
@@ -32,7 +36,7 @@
                             width: 220px;
                             box-sizing: border-box;
                             line-height: 30px;
-                            background: red;
+                            // background: #eee;
                             height: 30px;
                         }
                     }
