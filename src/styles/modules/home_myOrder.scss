@@ -1,10 +1,11 @@
  .myOrderOut{
      width:100%;
-     background: yellow;
+     margin:38px auto;
+    //  background: yellow;
      .myOrder{
          position: relative;    
          width: 1100px;
-         background: pink;
+        //  background: pink;
          margin: 0 auto;
         margin-top: 5px;
          .tableInfo{
@@ -14,7 +15,7 @@
                 font-size: 20px;
             }
             .tableId{
-                color: red;
+                color: red; 
                 margin-left: 2px;
                 font-size: 18px;
             }
@@ -22,16 +23,46 @@
         .orderTable{
             width: 900px;
             margin: 0 auto;
-            background: yellowgreen;
+            
+            // background: yellowgreen;
             text-align: center;
-            border: 1px solid #333;
+            border-bottom: 1px solid #333;
+            tr:nth-child(2) .orderImg{
+                margin-top: 10px;
+            }
+            tr:last-child .orderImg{
+                margin-bottom: 10px;
+            } 
             th{
                 border-bottom: 1px solid #333;
             }
+            td{
+                font-size: 18px;
+            }
+            button{
+                border-radius: 50%;
+                background: none;
+                border: 1px solid #333;
+                text-align: center; 
+                vertical-align: middle;
+                width: 20px;
+                height: 20px;
+                margin: 0 auto;
+                &:hover{
+                    background: black;
+                    color: white;
+                    transition: .3s
+                }
+            }
+            .proNum{
+                font-size: 18px;
+                text-align: center;
+                vertical-align: middle;
+            }
             .orderImg{
-                width: 100px;
+                width: 100px; 
                 height: 100px;
-                background: red;
+                background: gray;
                 margin: 5px auto;
             }
         }
@@ -47,7 +78,7 @@
                 color: red;
                 margin-right: 5px;
             }
-            .subOrder{
+            .subOrder{ 
                 border-radius: 5px;
                 box-sizing: border-box;
                 background: #eee;
@@ -58,7 +89,7 @@
                 text-align: center;
                 font-size: 18px;
                 margin-left: 20px;
-                margin-top: -7px;
+                margin-top: -6px;
             }
         } 
      }
