@@ -1,7 +1,8 @@
 const login = (data) => {
   return $.ajax({
     url: '/api/users/login',
-    type: 'get',
+    type: 'POST',
+    contentType: "application/json; charset=utf-8",
     data,
     success: result => result
   })

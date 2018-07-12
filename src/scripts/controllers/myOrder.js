@@ -1,7 +1,7 @@
 const myOrderModel = require('../models/myOrder')
+const wsCache = new WebStorageCache()
 
 async function renderOrderList() {
-  let wsCache = new WebStorageCache()
   let wsCartList = wsCache.get('cartList')
 
   let html = `<tr>
@@ -49,4 +49,12 @@ async function renderOrderList() {
   }
 }
 
-module.exports = { renderOrderList }
+function submitOrder() {
+  $('.subOrder').on('click', function () {
+    let hasLogin = wsCache.get('haslogin')
+    let wsCartList = wsCache.get('cartList')
+    console.log(hasLogin, wsCartList);
+  })
+}
+
+module.exports = { renderOrderList, submitOrder }

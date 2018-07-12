@@ -10,3 +10,4 @@ document.querySelector('.container').innerHTML = headerTpl + homeMyOrderTpl
 
 indexController.headerAction()
 myOrderController.renderOrderList()
+myOrderController.submitOrder()
