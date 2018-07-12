@@ -1,42 +1,43 @@
+body{
+    background: #fff;
+}
 .orderMainOut{
-    background: #ddd;
     margin-top:38px;
     width: 100%;
     .orderMain{
         width: 1100px;
         margin: 0 auto;
         .orderList{
-            width:220px;
+            width:215px;
             float: left;
             ul{ 
                 color: #555;
+                margin-right: 5px;
                 .fir_li{
                     a{
-                        width: 220px;
+                        width: 215px; 
                         display: block;
                         font-size: 16px;
                         line-height: 30px;
+                        color: #fff;
                         background: #ae8648;
-                        border-top-left-radius:10px;
-                        border-top-right-radius:10px;
-                        
                     }
-                    width:220px;
-                    float: left;
+                    width:215px;
+                    float: left; 
+                    overflow: hidden;
                     font-size: 16px;
                     box-sizing: border-box;
-                    border: 1px solid #333;
-                    border-radius: 10px;
                     text-align: center; 
                     line-height: 30px;
                     margin-bottom: 5px;
                     cursor: pointer;  
                     ul{
+                        width: 100%;
                         .sec_li{
-                            width: 220px;
+                            width:100%;
                             box-sizing: border-box;
                             line-height: 30px;
-                            // background: #eee;
+                            background: #eee;
                             height: 30px;
                         }
                     }
@@ -47,20 +48,22 @@
         .orderContainer{
             float: left;
             width: 880px;
-            background: green;
-            box-sizing: border-box;
+            margin-left: 5px;
+            box-sizing: border-box; 
             ul{
                 margin-left: 5px;
-                
+                .goodInfo:nth-child(4n){
+                    border-right:  #ccc solid 1px;
+                }
                 .goodInfo{
+                    overflow: hidden;
                     float: left;
                     width: 210px;
-                    background: pink; 
-                    margin: 4px ;
+                    padding:0 5px ;
+                    margin-bottom: 20px;
                     position:relative;
                     box-sizing: border-box;
-                    border-radius: 5px;
-                    border: #333 solid 1px;
+                    border-left: #ccc solid 1px;
                     .goodImage{
                         width: 190px;
                         height: 190px;
@@ -69,16 +72,25 @@
                     } 
                     .goodName{
                         width: 100%;
-                        font-size: 18px;
+                        font-size: 16px;
                         text-align: center;
                         font-weight: 500;
-                        line-height: 24px;
+                        line-height: 22px;
                         color:black;
                     }
                     .goodPrice{
                         width: 100%;
+                        font-size: 14px;
+                        text-align: center; 
+                        color: #333;
+                        font-weight: normal;
+                        margin: 4px auto;
+                        line-height: 14px;
+                    }
+                    .goodPriceVip{
+                        width: 100%;
                         font-size: 16px;
-                        text-align: center;
+                        text-align: center; 
                         color: red;
                         font-weight: bold;
                         margin: 4px auto;
@@ -89,14 +101,17 @@
                     button{ 
                         margin:0 auto;
                         text-align:center;
-                        width:208px ;
+                        width:199px ;
                         box-sizing:border-box;  
                         height:32px;
                         line-height:32px;
-                        background:red;
+                        background: rgba($color: #000000, $alpha: 0.8);
                         color:white;
                         border:0;
-                        
+                        &:hover{
+                            background: #8f2626;
+                            transition: .4s;
+                        }
                     }
                 }
             }
