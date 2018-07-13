@@ -16,7 +16,6 @@ const singin =  function(){
         if(!regEmall.test(oEmall)){
              $(".errMsg").css("opacity",1)
              canRe=false;
-            // $("#emall").val()="";
         }else{
             $(".errMsg").css("opacity",0)
             canRe = true
@@ -27,7 +26,6 @@ const singin =  function(){
         if(!phonereg.test(userName)){
              $(".phoneerrMsg").css("opacity",1)
              canRe=false;
-            // $("#emall").val()="";
         }else{
             $(".phoneerrMsg").css("opacity",0)
             canRe = true
@@ -42,11 +40,9 @@ const singin =  function(){
         password: $("#password").val(),
         email: $("#emall").val()
         }
-    console.log({ username, password, email });
-    if(canRe){
-        let result =  sinGin({ username, password, email }, "signin") 
-        console.log(result)          
-    }
+        if(canRe){
+            let result =  sinGin({ username, password, email }, "signin") 
+        }
       })
   }
   const sinGin = (data) => {

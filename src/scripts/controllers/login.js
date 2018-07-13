@@ -31,7 +31,7 @@ const login = function () {
             let userinfo = { username, password }
             let result = await loginModel.login(userinfo)
             if (result.res) {
-                // create WebStorageCache instance.
+                // create WebStorageCa-che instance.
                 var wsCache = new WebStorageCache();
                 wsCache.set('haslogin', true);
                 var d = dialog({
